@@ -1,0 +1,126 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	background:#161623 ;
+	background-position: fixed;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+body::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+	background: linear-gradient(#f00,#f0f);
+	clip-path: circle(20% at right 66%);
+}
+
+body::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+    height: 100%;
+	background: linear-gradient(#2196f3,#e91e63);
+	clip-path: circle(20% at 10% 10%);
+}
+h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.container{
+	position: relative;
+	max-width: 800px;
+	padding: 10px;
+	margin: 50px auto;
+}
+.addTask{
+	width: 100%;
+	display: flex;
+	padding: 10px 0;
+}
+.addTask > input[type="text"]{
+	width: 90%;
+	color: #fff;
+	border:none;
+	border-bottom: 2px solid #666;
+	background: none;
+	padding: 10px;
+	font-size: 22px;
+	outline: none;
+}
+.addTask button{
+	margin: 0 10px;
+	background: #e91e63;
+	color: #fff;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 10px;
+	border: none;
+	outline: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.notCompleted, .Completed{
+	margin: 5px 0;
+	padding: 20px;
+}
+h3{
+	font-size: 28px;
+	text-transform: uppercase;
+	text-align: center;
+	color: #000;
+}
+ol{
+	list-style: none;
+	counter-reset: my-counter;
+}
+ol li{
+	width: 100%;
+	padding: 18px;
+	margin: 5px 0;
+	background: rgba(255, 255, 255, 0.1);
+	color: aliceblue;
+	font-size: 22px;
+	counter-increment: my-counter;
+	border-radius: 3px;
+}
+ol.completed li{
+	background: rgba(255, 255, 255, 0.1);
+	color: antiquewhite;
+	
+}
+ol li::before{
+	content: counter(my-counter);
+	background: #2196f3;
+	width: 2rem;
+	height: 2rem;
+	border-radius: 50%;
+	display: inline-block;
+	line-height: 2rem;
+	text-align: center;
+	color: #000;
+	margin-right: 0.5rem; 
+}
+li button{
+	float: right;
+	padding: 5px;
+	font-size: 28px;
+	line-height: 28px;
+	margin-right: 15px;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
